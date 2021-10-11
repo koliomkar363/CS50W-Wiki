@@ -1,4 +1,4 @@
-# CS50W Project 0: Search
+# CS50W Project 1: Wiki
 
 Design a Wikipedia-like online encyclopedia.
 
