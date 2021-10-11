@@ -1,0 +1,26 @@
+{% extends "encyclopedia/layout.html" %}
+
+<!-- Title -->
+{% block title %} Search {% endblock %}
+
+<!-- Body Block Start-->
+{% block body %}
+<!-- Results -->
+{% if num == 1 %}
+<h2>There is {{ num }} entry with a substring "{{ query }}".</h2>
+{% elif num > 1 %}
+<h2>There are {{ num }} entries with a substing "{{ query }}".</h2>
+{% else %}
+<h2><strong>Error 404: Page not found.</strong></h2>
+{% endif %}
+<hr />
+<ul>
+  {% for result in results %}
+  <li><a href="{% url 'title' result %}">{{ result }}</a></li>
+  {% empty %}
+  <p>No match found for <em style="color: red">{{ query }}</em>.</p>
+  {% endfor %}
+</ul>
+
+<!-- Block Body End -->
+{% endblock %}

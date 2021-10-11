@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+<!-- Title -->
+{% block title %} {{ title }} {% endblock %}
+
+<!-- Body -->
+{% block body %}
+<h1><strong>Error 404: Not Found</strong></h1>
+<p>
+  The requested page <span style="color: red"><em>"{{ title }}"</em></span> does
+  not exist.
+</p>
+{% endblock %}
